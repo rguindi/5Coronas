@@ -124,7 +124,7 @@
           <div class="container mt-4 mb-5">
             <form>
               <!-- Fila 1 -->
-              <div class="row mb-3">
+              <div class="row mb-3 d-flex flex-nowrap">
                 <div class="col" style="visibility: hidden">
                   <div
                     type="text"
@@ -152,7 +152,7 @@
               </div>
 
               <!-- Fila 2 -->
-              <div class="row mb-3">
+              <div class="row mb-3 d-flex flex-nowrap">
                 <div class="col text-light align-content-center">
                   INFANTERÍA
                 </div>
@@ -162,14 +162,16 @@
                     id="INFama"
                     type="number"
                     class="form-control"
+                    style="min-width: 40px"
                   />
                 </div>
                 <div class="col">
                   <input
                     value="0"
                     id="INFrojo"
-                    type="text"
+                    type="number"
                     class="form-control"
+                    style="min-width: 40px"
                   />
                 </div>
                 <div class="col">
@@ -199,7 +201,7 @@
               </div>
 
               <!-- Fila 3 -->
-              <div class="row mb-3">
+              <div class="row mb-3 d-flex flex-nowrap">
                 <div class="col text-light align-content-center">
                   CABALLERÍA
                 </div>
@@ -209,6 +211,7 @@
                     id="CABama"
                     type="number"
                     class="form-control"
+                    style="min-width: 40px"
                   />
                 </div>
                 <div class="col">
@@ -217,6 +220,7 @@
                     id="CABrojo"
                     type="number"
                     class="form-control"
+                    style="min-width: 40px"
                   />
                 </div>
                 <div class="col" style="visibility: hidden">
@@ -246,7 +250,7 @@
               </div>
 
               <!-- Fila 4 -->
-              <div class="row mb-3">
+              <div class="row mb-3 d-flex flex-nowrap">
                 <div class="col text-light align-content-center">CAÑONES</div>
                 <div class="col">
                   <input
@@ -254,6 +258,7 @@
                     id="CANama"
                     type="number"
                     class="form-control"
+                    style="min-width: 40px"
                   />
                 </div>
                 <div class="col">
@@ -262,6 +267,7 @@
                     id="CANrojo"
                     type="number"
                     class="form-control"
+                    style="min-width: 40px"
                   />
                 </div>
                 <div class="col" style="visibility: hidden">
@@ -291,24 +297,26 @@
               </div>
 
               <!-- Fila 5 -->
-              <div class="row mb-3">
+              <div class="row mb-3 d-flex flex-nowrap">
                 <div class="col text-light align-content-center">
                   ÍNDICE DE DEFENSA
                 </div>
                 <div class="col">
                   <input
-                    value="0"
+                    value="1"
                     id="IDama"
                     type="number"
                     class="form-control"
+                    step="any"
                   />
                 </div>
                 <div class="col">
                   <input
-                    value="0"
+                    value="1"
                     id="IDrojo"
                     type="number"
                     class="form-control"
+                    step="any"
                   />
                 </div>
                 <div class="col" style="visibility: hidden">
@@ -401,6 +409,50 @@
         </div>
       </div>
     </section>
+
+    <!-- Modal simple sin Bootstrap -->
+    <div
+      id="modalVictoria"
+      style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <div
+        style="
+          background: #222;
+          color: white;
+          padding: 20px 30px;
+          border-radius: 8px;
+          text-align: center;
+          max-width: 300px;
+        "
+      >
+        <h3>¡Fin del combate!</h3>
+        <p id="mensajeVictoria"></p>
+        <button
+          id="cerrarModal"
+          style="
+            padding: 8px 20px;
+            background: #f1c40f;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+          "
+        >
+          Cerrar
+        </button>
+      </div>
+    </div>
 
     <!-- Partida section end -->
 
